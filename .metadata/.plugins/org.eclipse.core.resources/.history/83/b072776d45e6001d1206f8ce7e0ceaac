@@ -1,0 +1,5 @@
+package com.ezen.biz.view.controller;
+
+public class ViewResolver {
+
+}

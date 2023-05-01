@@ -1,0 +1,5 @@
+package com.neiman.Example;
+
+public interface Speaker {
+
+}

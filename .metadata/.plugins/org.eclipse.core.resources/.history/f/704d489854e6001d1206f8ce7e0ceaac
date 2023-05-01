@@ -1,0 +1,20 @@
+package com.ezen.biz.view.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.ezen.biz.view.user.LoginController;
+
+public class HandlerMapping {
+
+	private Map<String, CommonController> mappings;
+	
+	public HandlerMapping() {
+		mappings = new HashMap<String, CommonController>();
+		mappings.put("/login.do", new LoginController());
+	}
+	
+	public CommonController getController(String path) {
+		return mappings.get(path);
+	}
+}

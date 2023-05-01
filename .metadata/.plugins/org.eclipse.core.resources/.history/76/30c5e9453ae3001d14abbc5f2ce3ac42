@@ -1,0 +1,12 @@
+package com.neiman.Example;
+
+public class SamsungTV {
+	
+	Speaker speaker;
+	
+	public SamsungTV(Speaker speaker) {
+		this.speaker = speaker;
+	}
+	
+
+}

@@ -1,0 +1,39 @@
+package com.neiman.Example;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SamsungTV implements TV{
+	
+	Speaker speaker;
+	
+	@Autowired
+	public SamsungTV(@Qualifier("jblSpeaker") Speaker speaker) {
+		this.speaker = speaker;
+	}
+
+	@Override
+	public void turnOn() {
+		System.out.println(this.getClass() + "전원 on");
+		
+	}
+
+	@Override
+	public void turnOff() {
+		System.out.println(this.getClass() + "전원 off");
+		
+	}
+
+	@Override
+	public void volumeUp() {
+		speaker.volumeUp();
+	}
+
+	@Override
+	public void volumeDown() {
+		speaker.volumeDown();
+	}
+	
+
+}

@@ -1,0 +1,28 @@
+package com.ezen.biz.view.user;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
+import com.ezen.biz.DAO.UserDAO;
+import com.ezen.biz.DTO.UserVO;
+import com.ezen.biz.service.UserService;
+
+public class LoginController{
+
+	public String login(UserVO vo, UserDAO userDAO) {
+		System.out.println("로그인 처리");
+		
+		UserVO user = userDAO.getUser(vo);
+		if(user!=null){
+			return "getBoardList.do";
+		} else {
+			return "login.jsp";		
+		}
+		return mav;
+	}
+
+}

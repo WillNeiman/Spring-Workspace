@@ -1,0 +1,29 @@
+package com.ezen.biz.common;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Service;
+
+@Service
+@Aspect
+public class LogAdvice {
+	
+	@Pointcut("execution(* com.ezen.biz..*Impl.*(..))")
+	public void allPointcut() {}
+	
+	@Pointcut("execution(* com.ezen.biz..*Impl.get*(..))")
+	public void getPointcut() {}
+
+	@Before("allPointcut()")
+	public void beforeLog(JoinPoint jp) {
+		System.out.println("[beforeLog] " + jp.getSignature().toShortString() + " 시작");
+	}
+	
+	@After("allPointcut()")
+	public void afterLog(JoinPoint jp) {
+		System.out.println("[afterLog] " + jp.getSignature().toShortString() + " 종료");
+	}
+}

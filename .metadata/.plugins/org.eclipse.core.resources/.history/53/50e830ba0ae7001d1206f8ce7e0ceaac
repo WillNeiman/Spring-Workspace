@@ -1,0 +1,28 @@
+package com.ezen.biz.view.board;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.ezen.biz.DAO.BoardDAO;
+import com.ezen.biz.DTO.BoardVO;
+
+@Controller
+public class GetBoardListController{
+
+	@RequestMapping("/getBoardList.do")
+	public ModelAndView getBoardList(BoardVO vo, BoardDAO boardDAO, ModelAndView mav) {
+		
+		System.out.println("글 목록 검색 처리");
+		
+		mav.addObject("boardList", boardDAO.getBoardList());
+		mav.setViewName("getBoardList.jsp");
+		return mav;
+	}
+
+}

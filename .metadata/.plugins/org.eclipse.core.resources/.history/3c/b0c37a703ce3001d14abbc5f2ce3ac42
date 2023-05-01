@@ -1,0 +1,13 @@
+package com.neiman.Example;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface TV {
+	
+	public void turnOn();
+	public void turnOff();
+	public void volumeUp();
+	public void volumeDown();
+
+}

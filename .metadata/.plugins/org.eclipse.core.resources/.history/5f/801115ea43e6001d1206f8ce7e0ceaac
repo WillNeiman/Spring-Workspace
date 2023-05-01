@@ -1,0 +1,9 @@
+package com.ezen.biz.view.controller;
+
+import java.util.Map;
+
+import com.ezen.biz.view.Controller;
+
+public class HandlerMapping {
+	private Map<String, Controller> mappings;
+}

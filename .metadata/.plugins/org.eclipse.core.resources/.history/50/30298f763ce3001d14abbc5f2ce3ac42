@@ -1,0 +1,15 @@
+package com.neiman.Example;
+
+public class JBLSpeaker implements Speaker{
+
+	@Override
+	public void volumeUp() {
+		System.out.println(this.getClass() + "볼륨을 올린다.");		
+	}
+
+	@Override
+	public void volumeDown() {
+		System.out.println(this.getClass() + "볼륨을 내린다.");		
+	}
+
+}

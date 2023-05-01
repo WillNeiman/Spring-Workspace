@@ -1,0 +1,8 @@
+package com.ezen.biz.view.common;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice("com.ezen.biz")
+public class CommonExceptionHandler {
+
+}

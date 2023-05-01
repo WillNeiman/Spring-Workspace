@@ -1,0 +1,26 @@
+<%@page import="com.ezen.biz.DTO.BoardVO"%>
+<%@page import="com.ezen.biz.service.BoardService"%>
+<%@page import="org.springframework.context.support.GenericXmlApplicationContext"%>
+<%@page import="org.springframework.context.support.AbstractApplicationContext"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	//1. 검색할 게시물 번호 추출
+	int seq = Integer.parseInt(request.getParameter("seq"));
+	//2. DB 연동 처리	
+	AbstractApplicationContext container = 
+		new GenericXmlApplicationContext("applicationContext.xml");
+		
+	BoardService boardService = (BoardService) container.getBean("boardService");
+	BoardVO vo = boardService.getBoard(seq);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

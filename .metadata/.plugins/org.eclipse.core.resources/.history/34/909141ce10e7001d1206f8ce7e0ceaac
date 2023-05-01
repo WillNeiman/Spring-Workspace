@@ -1,0 +1,25 @@
+package com.ezen.biz.view.user;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ezen.biz.DAO.UserDAO;
+import com.ezen.biz.DTO.UserVO;
+
+@Controller
+public class LoginController{
+
+	@RequestMapping("/login.do")
+	public String login(UserVO vo, UserDAO userDAO) {
+		System.out.println("로그인 처리");
+		
+		UserVO user = userDAO.getUser(vo);
+		if(user!=null){
+			return "getBoardList.do";
+		} else {
+			return "login.jsp";		
+		}
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;04_Model2/src/main/webapp/deleteBoard.jsp&apos; to &apos;deleteBoard_proc.jsp&apos;" description="Rename resource &apos;deleteBoard.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/deleteBoard.jsp" name="deleteBoard_proc.jsp" stamp="1682732798160" updateReferences="true"/>
+</session>

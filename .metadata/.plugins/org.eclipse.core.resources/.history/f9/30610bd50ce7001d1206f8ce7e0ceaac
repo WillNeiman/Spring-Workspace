@@ -1,0 +1,20 @@
+package com.ezen.biz.view.board;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ezen.biz.DAO.BoardDAO;
+import com.ezen.biz.DTO.BoardVO;
+
+@Controller
+public class InsertBoardController{
+
+	@RequestMapping("/insertBoard.do")
+	public String insertBoard(BoardVO vo, BoardDAO boardDAO) {
+    	System.out.println("글 등록 처리");
+		
+		boardDAO.insertBoard(vo);		
+		return "getBoardList.do";
+	}
+
+}

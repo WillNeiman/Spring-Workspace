@@ -1,0 +1,5 @@
+package com.ezen.biz.view.user;
+
+public class LoginController {
+
+}

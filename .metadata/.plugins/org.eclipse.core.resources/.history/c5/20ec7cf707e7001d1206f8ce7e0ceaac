@@ -1,0 +1,37 @@
+package com.ezen.biz.view.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
+import com.ezen.biz.DAO.BoardDAO;
+import com.ezen.biz.DTO.BoardVO;
+import com.ezen.biz.service.BoardService;
+
+@org.springframework.stereotype.Controller
+public class InsertBoardController{
+
+	public void insertBoard(HttpServletRequest request) {
+    	System.out.println("글 등록 처리");
+    	
+		//1. 게시글 작성 정보			
+		String title = request.getParameter("title");
+		String writer = request.getParameter("writer");
+		String content = request.getParameter("content");
+		
+		//2. DB연동처리
+		BoardVO vo = new BoardVO();
+		vo.setTitle(title);
+		vo.setWriter(writer);
+		vo.setContent(content);
+		
+		BoardDAO boardDAO = new BoardDAO();
+		boardDAO.insertBoard(vo);		
+	}
+
+}

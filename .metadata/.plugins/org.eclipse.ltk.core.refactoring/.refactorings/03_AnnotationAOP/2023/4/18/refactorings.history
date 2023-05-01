@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;08_SpringMVC/src/main/java/com.ezen.biz.DAO&apos;&#x0D;&#x0A;- Original project: &apos;03_AnnotationAOP&apos;&#x0D;&#x0A;- Destination element: &apos;08_SpringMVC/src/main/java/com.ezen.biz.DAO&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.ezen.biz.DAO.BoardDAO.java&#x0D;&#x0A;     com.ezen.biz.DAO.UserDAO.java" description="Copy compilation units" destination="=08_SpringMVC/src\/main\/java&lt;com.ezen.biz.DAO" element1="/src\/main\/java&lt;com.ezen.biz.DAO{BoardDAO.java" element2="/src\/main\/java&lt;com.ezen.biz.DAO{UserDAO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1682822728057" units="2" version="1.0"/>
+</session>
